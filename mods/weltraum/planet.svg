@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="kugel" cx="35%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#f0abfc"/>
+      <stop offset=".45" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" x2="1">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#e9d5ff" stop-opacity=".9"/>
+      <stop offset=".7" stop-color="#a5b4fc" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="oben"><rect x="0" y="0" width="400" height="200"/></clipPath>
+  </defs>
+  <ellipse cx="200" cy="200" rx="190" ry="46" fill="none" stroke="url(#ring)" stroke-width="14" transform="rotate(-18 200 200)"/>
+  <circle cx="200" cy="200" r="112" fill="url(#kugel)"/>
+  <path d="M95 175 Q200 150 305 180" stroke="#f5d0fe" stroke-opacity=".25" stroke-width="10" fill="none"/>
+  <path d="M92 220 Q200 245 308 215" stroke="#312e81" stroke-opacity=".35" stroke-width="14" fill="none"/>
+  <ellipse cx="200" cy="200" rx="190" ry="46" fill="none" stroke="url(#ring)" stroke-width="14" transform="rotate(-18 200 200)" clip-path="url(#oben)"/>
+</svg>

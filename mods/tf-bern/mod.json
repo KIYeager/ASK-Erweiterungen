@@ -1,0 +1,8 @@
+{
+  "id": "tf-bern",
+  "name": "Technische Fachschule Bern",
+  "version": "1.0.0",
+  "beschreibung": "ASK im Erscheinungsbild der Technischen Fachschule Bern (CD-Manual 2022): TF Blau, Schwarz und Weiss, gerade Kanten, der 45°-Spickel bei blauen Kästen und eine DIN-Schrift. Schlicht und offiziell, hell und dunkel.",
+  "autor": "ASK",
+  "style": "style.css"
+}

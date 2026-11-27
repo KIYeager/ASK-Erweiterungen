@@ -73,6 +73,8 @@ Das Wurzelelement trägt `data-theme="dark"` oder `data-theme="light"`:
 :root[data-theme="light"] { --acc: #0e7490; --acc-ink: #ffffff; }
 ```
 
+**Eigene Schriften:** Nur freie Schriften (z. B. SIL Open Font License) mit Lizenzdatei im Ordner. ASK lädt Schriften aus dem Mod-Ordner nicht über `url("datei.woff2")`, weil die Mod-Adresse für Schriften nicht freigegeben ist. Bette die Schrift darum als `data:`-Adresse ein (`src: url("data:font/woff2;base64,…")`), schreib in einen Kommentar, welche Schrift es ist, und leg die `.woff2` zum Vergleich daneben. Klein halten: nur die nötigen Zeichen (z. B. mit `pyftsubset`). Bilder (`url("bild.svg")`) funktionieren normal.
+
 Eigene Elemente mit Klassen, die mit der Kennung beginnen (`.robo-helfer-blase`), damit nichts mit ASK kollidiert. Nicht pauschal `* { … }` umstellen. `@media (prefers-reduced-motion: reduce)` für Animationen beachten.
 
 <!-- OBERFLAECHE START (gleicher Abschnitt in resources/mod-anleitung/SKILL.md und resources/standard-skills/mod-erstellen/SKILL.md; ein Test prüft jede Klasse) -->

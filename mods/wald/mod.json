@@ -1,8 +1,9 @@
 {
   "id": "wald",
   "name": "Wald",
-  "version": "1.0.0",
-  "beschreibung": "Ruhige Grüntöne wie Moos und Tannen, warmes Holz als Akzent.",
+  "version": "2.0.0",
+  "beschreibung": "Ein ruhiger Wald: Tannen im Nebel hinter dem Chat, eine Kopfzeile aus Holz, Schrift wie in einem Buch und Blätter, die langsam fallen. Dunkel: Glühwürmchen in der Nacht. Knopf 🍃 schaltet die Bewegung aus.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }

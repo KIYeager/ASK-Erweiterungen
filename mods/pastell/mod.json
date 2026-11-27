@@ -1,8 +1,9 @@
 {
   "id": "pastell",
   "name": "Pastell",
-  "version": "1.0.0",
-  "beschreibung": "Weiche Pastellfarben in Rosa, Mint und Flieder, runde Ecken. Hell wie ein Sommertag, dunkel wie eine laue Sommernacht.",
+  "version": "2.0.0",
+  "beschreibung": "Weich und verspielt: schwebende Farbwolken in Rosa, Mint und Flieder, runde Formen, eine runde Schrift und kleine Glitzer beim Absenden. Hell wie ein Sommertag, dunkel wie eine laue Sommernacht. Knopf ✿ schaltet die Bewegung aus.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }

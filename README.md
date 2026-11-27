@@ -51,5 +51,5 @@ Im Zweifel nicht zusammenführen und die Autorin oder den Autor um Klärung bitt
 - Alltag und Lernen: `phishing-erkennen`, `bewerbung-schreiben`, `zusammenfassen`, `pruefung-vorbereiten`
 
 **Mods**
-- Aussehen: `neon`, `retro-terminal`, `pastell`, `hoher-kontrast`, `weltraum`, `wald`, `kaffee`, `sonnenuntergang`
+- Aussehen: `tf-bern` (Erscheinungsbild der Technischen Fachschule Bern), `retro-terminal`, `neon`, `weltraum`, `sonnenuntergang`, `pastell`, `wald`, `kaffee`, `hoher-kontrast`
 - Funktionen: `robo-helfer`, `pomodoro`, `vokabeln`, `quiz`, `konfetti`, `notizblock`
