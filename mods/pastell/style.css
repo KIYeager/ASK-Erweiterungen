@@ -1,0 +1,19 @@
+/* Pastell: nur Farben und Rundungen über die Variablen von ASK */
+:root[data-theme="light"] {
+  --bg: #fdf7fb; --side: #f6eef8; --pane: #fffbfe; --card: #f8f0fa; --hover: #f0e4f4;
+  --line: #ecdcef; --line-2: #dcc6e2; --code: #f6eff8;
+  --text: #2e2540; --muted: #5f5375; --dim: #8a7f9c;
+  --acc: #c2417f; --acc-text: #a8306b; --acc-ink: #ffffff; --acc-soft: #fbe3ef; --acc-line: #f0a9cb;
+  --ok: #2f8a5f; --bad: #c03a4a; --warn: #8a5d00;
+  --think-1: #8fb8ff; --think-2: #8fd9c0; --think-3: #f7c58f; --think-4: #f59fc0;
+  --r-sm: 9px; --r: 14px; --r-lg: 22px;
+}
+:root[data-theme="dark"] {
+  --bg: #1d1a26; --side: #17151f; --pane: #211d2c; --card: #2a2538; --hover: #332d44;
+  --line: #3a3350; --line-2: #4a4166; --code: #26223a;
+  --text: #f4ecff; --muted: #c6b9dc; --dim: #998bb3;
+  --acc: #f6a5c8; --acc-text: #ffbfdb; --acc-ink: #2a1020; --acc-soft: #3e2a40; --acc-line: #7a4a6a;
+  --ok: #9be3c4; --bad: #ff9aa8; --warn: #ffd59a;
+  --think-1: #a9c7ff; --think-2: #9be3c4; --think-3: #ffd59a; --think-4: #f6a5c8;
+  --r-sm: 9px; --r: 14px; --r-lg: 22px;
+}

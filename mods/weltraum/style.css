@@ -1,0 +1,35 @@
+/* Weltraum: Sterne im Hintergrund, Flächen leicht durchsichtig, damit der Himmel durchscheint */
+:root[data-theme="dark"] {
+  --bg: #060816; --side: rgba(8, 10, 28, .62); --pane: rgba(10, 13, 34, .58); --card: rgba(24, 28, 66, .9); --hover: rgba(44, 48, 100, .9);
+  --line: #262b5c; --line-2: #343a7a; --code: rgba(18, 21, 52, .95);
+  --text: #eef0ff; --muted: #b3b8e6; --dim: #8289c2;
+  --acc: #a78bfa; --acc-text: #c4b5fd; --acc-ink: #160b33; --acc-soft: #2b2160; --acc-line: #5b4bb0;
+  --ok: #6ee7b7; --bad: #fb7185; --warn: #fcd34d;
+  --think-1: #60a5fa; --think-2: #a78bfa; --think-3: #f0abfc; --think-4: #fb7185;
+}
+:root[data-theme="dark"] body {
+  background-color: #060816;
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 18%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 27% 72%, #dbe4ff 50%, transparent 51%),
+    radial-gradient(2.2px 2.2px at 41% 33%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 58% 84%, #c7d2fe 50%, transparent 51%),
+    radial-gradient(2.2px 2.2px at 66% 12%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 79% 46%, #e0e7ff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 91% 77%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 5% 92%, #c7d2fe 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 33% 52%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 84% 28%, #fde68a 50%, transparent 51%),
+    radial-gradient(ellipse at 80% 10%, rgba(124, 58, 237, .28), transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(37, 99, 235, .25), transparent 55%);
+  background-size: 240px 240px, 310px 310px, 380px 380px, 270px 270px, 420px 420px, 330px 330px, 290px 290px, 360px 360px, 200px 200px, 450px 450px, 100% 100%, 100% 100%;
+  background-attachment: fixed;
+}
+:root[data-theme="dark"] .popover, :root[data-theme="dark"] .dialog { background-color: #0d1130; }
+:root[data-theme="light"] {
+  --bg: #eef0fb; --side: #e6e8f8; --pane: #f7f8ff; --card: #ecebfb; --hover: #dfdcf6;
+  --line: #d6d4f0; --line-2: #c3bfe8; --code: #eceafa;
+  --text: #191a3a; --muted: #4a4c78; --dim: #74769e;
+  --acc: #6d28d9; --acc-text: #5b21b6; --acc-ink: #ffffff; --acc-soft: #ece4ff; --acc-line: #c4b0f5;
+}
+:root[data-theme="light"] body { background: linear-gradient(180deg, #e6e2fb 0%, #f3eefa 55%, #fdeee6 100%) fixed; }

@@ -1,0 +1,22 @@
+/* Retro-Terminal: Farben und Schrift über die Variablen von ASK, dazu feine Bildschirmlinien */
+:root[data-theme="dark"] {
+  --bg: #050805; --side: #030503; --pane: #070b07; --card: #0b130b; --hover: #102010;
+  --line: #163016; --line-2: #1f4a1f; --code: #0a140a;
+  --text: #39ff6a; --muted: #2fcf57; --dim: #24a044;
+  --acc: #39ff6a; --acc-text: #6bff90; --acc-ink: #031006; --acc-soft: #0d2a12; --acc-line: #1f6b2f;
+  --ok: #39ff6a; --bad: #ff5f56; --bad-soft: #2a0d0b; --warn: #ffd23f; --warn-soft: #241e08; --warn-line: #5c4d12;
+  --think-1: #1f9e3f; --think-2: #39ff6a; --think-3: #b6ff3f; --think-4: #ffd23f;
+  --sans: var(--mono); --r-sm: 2px; --r: 3px; --r-lg: 4px;
+}
+:root[data-theme="light"] {
+  --bg: #f6efdc; --side: #efe5cb; --pane: #fbf6e8; --card: #f3eacf; --hover: #eadfbf;
+  --line: #ddcfa6; --line-2: #cbb987; --code: #f1e7c8;
+  --text: #3d2a00; --muted: #6b4c05; --dim: #8a6a1f;
+  --acc: #9a5b00; --acc-text: #7d4a00; --acc-ink: #fffaf0; --acc-soft: #f1dfb4; --acc-line: #d2ad62;
+  --sans: var(--mono); --r-sm: 2px; --r: 3px; --r-lg: 4px;
+}
+:root[data-theme="dark"] body { text-shadow: 0 0 4px rgba(57, 255, 106, .25); }
+:root[data-theme="dark"] body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 2147483000;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, .18) 0 1px, transparent 1px 3px);
+}

@@ -1,0 +1,8 @@
+{
+  "id": "retro-terminal",
+  "name": "Retro-Terminal",
+  "version": "1.0.0",
+  "beschreibung": "Grüne Schrift auf Schwarz, alles in Monospace und feine Bildschirmlinien wie bei einem alten Terminal. Hell: Bernstein auf Papier.",
+  "autor": "ASK",
+  "style": "style.css"
+}

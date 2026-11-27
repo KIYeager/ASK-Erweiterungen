@@ -1,0 +1,8 @@
+{
+  "id": "hoher-kontrast",
+  "name": "Hoher Kontrast",
+  "version": "1.0.0",
+  "beschreibung": "Sehr starke Kontraste, deutliche Linien, unterstrichene Links und ein dicker Fokusrahmen. Gut lesbar, auch bei Sehschwäche.",
+  "autor": "ASK",
+  "style": "style.css"
+}

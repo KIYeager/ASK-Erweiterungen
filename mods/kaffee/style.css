@@ -1,0 +1,18 @@
+/* Kaffee: warme Braun- und Cremetöne, nur Farben über die Variablen von ASK */
+:root[data-theme="dark"] {
+  --bg: #1b1410; --side: #15100c; --pane: #1e1712; --card: #281f18; --hover: #33281f;
+  --line: #3a2d23; --line-2: #4b3a2d; --code: #231a14;
+  --text: #f3e9df; --muted: #cdb8a3; --dim: #9e8670;
+  --acc: #d9a066; --acc-text: #e8b783; --acc-ink: #24150a; --acc-soft: #3d2b1c; --acc-line: #7a5636;
+  --ok: #a8c686; --bad: #e88a7a; --warn: #e5b85c;
+  --think-1: #a47a52; --think-2: #c8925e; --think-3: #d9a066; --think-4: #e8875a;
+  --r: 12px;
+}
+:root[data-theme="light"] {
+  --bg: #fbf6ef; --side: #f4ece0; --pane: #fffbf5; --card: #f6eee3; --hover: #ede1d1;
+  --line: #e6d7c4; --line-2: #d6c0a6; --code: #f4ebdf;
+  --text: #2b1d12; --muted: #5e4634; --dim: #8a705b;
+  --acc: #8b4f22; --acc-text: #7a441c; --acc-ink: #ffffff; --acc-soft: #f3e2cf; --acc-line: #d2a57d;
+  --ok: #3f6e2a; --bad: #a3392b; --warn: #7a5410;
+  --r: 12px;
+}

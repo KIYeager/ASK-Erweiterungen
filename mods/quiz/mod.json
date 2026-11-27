@@ -1,0 +1,40 @@
+{
+  "id": "quiz",
+  "name": "Quiz-Befehle",
+  "version": "1.0.0",
+  "beschreibung": "Sechs Befehle zum Üben: /quiz, /wahr-falsch, /karteikarten, /lueckentext, /code-quiz und /begriff-raten. ASK fragt einzeln, wartet auf deine Antwort und zählt Punkte.",
+  "autor": "ASK",
+  "befehle": [
+    {
+      "name": "quiz",
+      "beschreibung": "Multiple-Choice-Quiz zu einem Thema",
+      "prompt": "Mach mit mir ein Quiz mit 8 Multiple-Choice-Fragen zum Thema: {{text}}. Stell immer nur eine Frage mit den Antworten A bis D, warte auf meine Antwort, sag mir, ob sie stimmt, und erklär kurz warum. Steigere die Schwierigkeit langsam. Zeig am Schluss meine Punkte und welche Themen ich wiederholen sollte."
+    },
+    {
+      "name": "wahr-falsch",
+      "beschreibung": "Wahr-oder-falsch-Aussagen",
+      "prompt": "Gib mir nacheinander 10 Aussagen zum Thema: {{text}}. Manche stimmen, manche nicht. Ich antworte mit «wahr» oder «falsch». Warte jeweils auf meine Antwort, löse dann auf und erklär in einem Satz. Zähl am Schluss meine Punkte."
+    },
+    {
+      "name": "karteikarten",
+      "beschreibung": "Karteikarten abfragen",
+      "prompt": "Frag mich mit Karteikarten ab zum Thema: {{text}}. Zeig immer nur die Vorderseite (Begriff oder Frage), warte auf meine Antwort und zeig dann die Rückseite. Frag, ob ich es wusste. Karten, die ich nicht wusste, kommen am Schluss nochmals. Höre nach 12 Karten auf und fasse zusammen."
+    },
+    {
+      "name": "lueckentext",
+      "beschreibung": "Lückentext ausfüllen",
+      "prompt": "Schreib einen kurzen Lückentext (6 bis 8 Lücken, nummeriert als ___1___ usw.) zum Thema: {{text}}. Ich fülle die Lücken aus. Warte auf meine Antworten, korrigiere sie dann einzeln und zeig am Schluss den vollständigen Text."
+    },
+    {
+      "name": "code-quiz",
+      "beschreibung": "Was gibt dieser Code aus?",
+      "prompt": "Mach mit mir ein Code-Quiz mit 6 Aufgaben in dieser Sprache oder zu diesem Thema: {{text}} (ohne Angabe: Python). Zeig jeweils ein kurzes Codestück (höchstens 10 Zeilen) und frag, was es ausgibt oder wo der Fehler ist. Warte auf meine Antwort, prüf sie, indem du den Code wirklich ausführst, und erklär Schritt für Schritt. Zähl am Schluss meine Punkte."
+    },
+    {
+      "name": "begriff-raten",
+      "beschreibung": "Fachbegriffe erraten",
+      "prompt": "Spiel mit mir «Begriff raten» zum Thema: {{text}}. Du denkst dir einen Fachbegriff aus und gibst mir nacheinander bis zu drei Hinweise, vom schwierigsten zum leichtesten. Ich rate nach jedem Hinweis. Früh geraten gibt mehr Punkte (3, 2, 1). Spiel 6 Runden und zähl die Punkte."
+    }
+  ],
+  "anweisungen": "Bei Quiz-Befehlen: Stell immer nur eine Frage auf einmal und warte auf die Antwort. Verrate die Lösung nicht im Voraus. Korrigiere freundlich und ermutigend. Prüfe Fakten sorgfältig; bist du unsicher, sag es."
+}
