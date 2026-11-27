@@ -1,8 +1,9 @@
 {
   "id": "kaffee",
   "name": "Kaffee",
-  "version": "1.0.0",
-  "beschreibung": "Warme Braun- und Cremetöne wie in einem gemütlichen Café.",
+  "version": "2.0.0",
+  "beschreibung": "Ein gemütliches Café: hell Papier mit Kaffeeflecken, dunkel eine Kreidetafel mit Handschrift. Dazu eine Kaffeetasse, die sich leert, während du arbeitest. Klick auf die Tasse heisst: Pause gemacht, frisch nachgefüllt.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }

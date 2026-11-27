@@ -1,8 +1,9 @@
 {
   "id": "weltraum",
   "name": "Weltraum",
-  "version": "1.0.0",
-  "beschreibung": "Tiefblauer Nachthimmel mit Sternen hinter dem Chat und violetten Akzenten. Hell: Morgendämmerung.",
+  "version": "2.0.0",
+  "beschreibung": "ASK schwebt im All: Glasflächen, Sterne in mehreren Ebenen, ein Planet mit Ring, Sternschnuppen und eine Rakete, die beim Absenden startet. Hell: Morgendämmerung. Knopf 🌠 schaltet die Bewegung aus.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }

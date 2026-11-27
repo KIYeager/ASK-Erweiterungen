@@ -1,8 +1,9 @@
 {
   "id": "neon",
   "name": "Neon",
-  "version": "1.0.0",
-  "beschreibung": "Ein dunkles Neon-Design mit leuchtenden Akzenten und etwas rundereren Ecken.",
+  "version": "2.0.0",
+  "beschreibung": "Synthwave in ASK: leuchtende Neonröhren-Rahmen, ein bewegtes Gitter wie in einem 80er-Videospiel, ein Lichtkegel, der der Maus folgt, und ein flackerndes LIVE-Schild, während ASK arbeitet. Knopf 🌆 schaltet die Bewegung aus.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }

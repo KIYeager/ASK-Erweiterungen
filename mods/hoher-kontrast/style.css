@@ -1,10 +1,12 @@
-/* Hoher Kontrast: starke Farben, deutliche Linien, unterstrichene Links, dicker Fokus */
+/* Hoher Kontrast: sehr starke Farben, dicke Linien, unterstrichene Links, grosser Fokus, etwas grössere Schrift.
+   Ohne Animation, ohne Transparenz, ohne Bilder: Lesbarkeit geht vor. */
 :root[data-theme="dark"] {
   --bg: #000000; --side: #000000; --pane: #000000; --card: #0d0d0d; --hover: #262626;
   --line: #bfbfbf; --line-2: #ffffff; --code: #101010;
   --text: #ffffff; --muted: #f0f0f0; --dim: #d6d6d6;
   --acc: #ffe600; --acc-text: #ffe600; --acc-ink: #000000; --acc-soft: #332e00; --acc-line: #ffe600;
   --ok: #4dff88; --bad: #ff6b6b; --bad-soft: #330000; --warn: #ffb000; --warn-soft: #2b1d00; --warn-line: #ffb000;
+  --shadow: none;
 }
 :root[data-theme="light"] {
   --bg: #ffffff; --side: #ffffff; --pane: #ffffff; --card: #f2f2f2; --hover: #e0e0e0;
@@ -12,6 +14,24 @@
   --text: #000000; --muted: #1a1a1a; --dim: #333333;
   --acc: #0033cc; --acc-text: #0033cc; --acc-ink: #ffffff; --acc-soft: #e0e8ff; --acc-line: #0033cc;
   --ok: #006b1f; --bad: #b00000; --bad-soft: #ffe5e5; --warn: #6b4500; --warn-soft: #fff3d6; --warn-line: #6b4500;
+  --shadow: none;
 }
+/* etwas grössere Schrift im Chat */
+:root .msg.assistant { font-size: 16px; line-height: 1.6; }
+:root .msg.user .bubble { font-size: 15.5px; }
+:root .input-box textarea { font-size: 15.5px; }
+/* deutliche Linien */
+:root .input-box { border: 2px solid var(--line-2); box-shadow: none; }
+:root .input-box:focus-within { border-color: var(--acc); box-shadow: 0 0 0 2px var(--acc); }
+:root .msg.user .bubble { border: 2px solid var(--line-2); }
+:root .work, :root .md table, :root .md pre, :root .example, :root .chip, :root .btn, :root .search { border-width: 2px !important; border-color: var(--line-2) !important; }
+:root .topbar { border-bottom: 2px solid var(--line-2); }
+:root .chatbar { border-right: 2px solid var(--line-2); }
+:root .chat-item.active { box-shadow: inset 0 0 0 2px var(--acc); }
+/* Fokus und Links */
 :root :focus-visible { outline: 3px solid var(--acc) !important; outline-offset: 2px !important; }
-:root .md a { text-decoration: underline; text-underline-offset: 2px; }
+:root .md a { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+:root .md code { outline: 1px solid var(--line); }
+/* leise Texte gut lesbar */
+:root .hintline, :root .cwhen, :root .small, :root .muted { color: var(--muted) !important; }
+:root *::selection { background: var(--acc); color: var(--acc-ink); }

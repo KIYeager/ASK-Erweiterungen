@@ -1,0 +1,105 @@
+/* Technische Fachschule Bern: Erscheinungsbild nach dem Corporate Design Manual (Mai 2022).
+   - Farben (CD 1.4): TF Blau #0082B4 und nur die Stufen 80 %, 65 %, 50 %; Schwarz für Schrift, Weiss.
+     Sekundärfarben (CD 1.4.4) nur für Zustände (ok, Fehler, Warnung).
+   - Formen (CD 1.5): keine Rundungen, keine Kreise, keine Schatten. Blaue Kästen bekommen rechts unten den
+     45°-Spickel. Inhalte stehen auf einer 2-px-Linie in TF Blau statt in Kästen.
+   - Schrift (CD 1.3): DIN OT, Titel fett, Text leicht. DIN OT ist lizenziert und liegt nicht im Mod: Sie wird
+     benutzt, wenn sie installiert ist, sonst Bahnschrift (DIN-Schrift von Windows), sonst Arial.
+   - Das TF-Zeichen kommt von ASK selbst; der Mod bringt kein eigenes Logo mit. */
+
+:root {
+  --tf-blau: #0082b4; --tf-blau-80: #3399c3; --tf-blau-65: #55aacf; --tf-blau-50: #80c1da;
+  --tf-orange: #f28855; --tf-gruen: #4eb68e; --tf-rot: #ee716d; --tf-warmgrau: #a5acae;
+  --tf-spickel-klein: 12px; --tf-spickel: 18px;
+  --sans: "DIN OT", "Bahnschrift", Arial, sans-serif;
+  --r-sm: 0px; --r: 0px; --r-lg: 0px;
+  --shadow: none;
+}
+:root[data-theme="light"] {
+  --bg: #ffffff; --side: #ffffff; --pane: #ffffff; --card: #f3f4f4; --hover: #e6f2f8; --code: #f3f4f4;
+  --line: #d2d6d7; --line-2: #a5acae;
+  --text: #000000; --muted: #333333; --dim: #5c6264;
+  --acc: #0082b4; --acc-text: #000000; --acc-ink: #ffffff; --acc-soft: #e6f2f8; --acc-line: #80c1da;
+  --ok: #2c7a5b; --bad: #b4302b; --bad-soft: #fdeceb; --warn: #8a4a1f; --warn-soft: #fdf0e9; --warn-line: #f28855;
+  --think-1: #80c1da; --think-2: #55aacf; --think-3: #3399c3; --think-4: #0082b4;
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --side: #000000; --pane: #000000; --card: #121414; --hover: #0d2a38; --code: #121414;
+  --line: #2b2f30; --line-2: #5c6264;
+  --text: #ffffff; --muted: #d5d8d9; --dim: #a5acae;
+  --acc: #55aacf; --acc-text: #80c1da; --acc-ink: #000000; --acc-soft: #0d2a38; --acc-line: #0082b4;
+  --ok: #4eb68e; --bad: #ee716d; --bad-soft: #2a1110; --warn: #f28855; --warn-soft: #2a1a10; --warn-line: #8a4a1f;
+  --think-1: #80c1da; --think-2: #55aacf; --think-3: #3399c3; --think-4: #0082b4;
+}
+
+/* ---------- Schrift: Titel fett, Text leicht ---------- */
+:root body { font-weight: 300; line-height: 1.45; letter-spacing: .005em; }
+:root b, :root strong, :root th, :root .wordmark, :root .welcome h1, :root .md h1, :root .md h2, :root .md h3, :root .md h4,
+:root .side-label, :root .new-chat, :root .work-head .title, :root .chat-item.active, :root .group-toggle, :root .dialog h1 { font-weight: 700; }
+:root .side-label { text-transform: none; letter-spacing: 0; color: var(--tf-blau); font-size: 13px; }
+:root[data-theme="dark"] .side-label { color: var(--tf-blau-65); }
+:root .wordmark { font-size: 17px; letter-spacing: .02em; }
+
+/* ---------- Kopfzeile und Leisten ---------- */
+:root .topbar { background: var(--pane); border-bottom: 2px solid var(--tf-blau); }
+:root .chatbar { background: var(--side); border-right: 1px solid var(--line); }
+:root .sidebar { border-left: 1px solid var(--line); }
+:root .resizer { background: transparent; }
+:root .tab.on { border-color: var(--line); border-bottom-color: var(--pane); box-shadow: inset 0 3px 0 var(--tf-blau); }
+:root .chat-item { border-radius: 0; }
+:root .chat-item.active { background: var(--acc-soft); box-shadow: inset 3px 0 0 var(--tf-blau); color: var(--text); }
+:root .new-chat { background: var(--tf-blau); color: #ffffff; border-radius: 0; justify-content: flex-start; padding: 10px 14px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel-klein)), calc(100% - var(--tf-spickel-klein)) 100%, 0 100%); }
+:root .new-chat:hover:not(:disabled) { background: var(--tf-blau-80); filter: none; }
+:root .search, :root .crumb, :root .chip, :root .btn, :root .model-pick select, :root .example, :root .avatar { border-radius: 0 !important; }
+:root .btn { box-shadow: none; }
+:root .btn.primary, :root .btn-primary { background: var(--tf-blau); border-color: var(--tf-blau); color: #ffffff; }
+
+/* ---------- Willkommen ---------- */
+:root .welcome-mark { order: -2; height: 52px; }
+:root .welcome::before { content: "Technische Fachschule Bern"; order: -1; color: var(--tf-blau); font-weight: 700; font-size: 14px; }
+:root[data-theme="dark"] .welcome::before { color: var(--tf-blau-65); }
+:root .welcome h1 { font-size: 34px; line-height: 1.12; letter-spacing: -.01em; }
+:root .example { border: 0; border-top: 2px solid var(--tf-blau); background: var(--card); }
+:root .example:hover { background: var(--acc-soft); }
+
+/* ---------- Chat ---------- */
+:root .msg.user .bubble { background: var(--tf-blau); color: #ffffff; border-radius: 0; font-weight: 400; padding: 10px 16px 12px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel-klein)), calc(100% - var(--tf-spickel-klein)) 100%, 0 100%); }
+:root .msg.user .bubble a, :root .msg.user .bubble code { color: #ffffff; }
+:root .work { border: 0 !important; border-top: 2px solid var(--tf-blau) !important; border-radius: 0 !important; background: var(--card); }
+:root .md h1, :root .md h2, :root .md h3 { color: var(--text); }
+:root .md h2 { padding-top: 6px; border-top: 2px solid var(--tf-blau); }
+:root .md a { color: var(--text); text-decoration: underline; text-decoration-color: var(--tf-blau); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+:root .md a:hover { text-decoration-color: var(--tf-blau-65); }
+:root .md table { border: 0; border-top: 2px solid var(--tf-blau); border-radius: 0; }
+:root .md th { background: transparent; color: var(--text); }
+:root .md td, :root .md th { border-color: var(--line); }
+:root .md pre, :root .md .codehead { border-radius: 0 !important; }
+:root .md blockquote { border-left: 3px solid var(--tf-blau); color: var(--muted); }
+:root .md code.file { background: var(--acc-soft); color: var(--text); }
+:root .msg.question, :root .msg.approval { border-radius: 0 !important; }
+:root .msg.question.open { background: var(--acc-soft); border: 0; border-top: 2px solid var(--tf-blau); }
+:root .msg.assistant.streaming .md > :last-child::after { background: var(--tf-blau); border-radius: 0; }
+
+/* ---------- Eingabe ---------- */
+:root .input-box { border: 0; border-top: 2px solid var(--tf-blau); border-radius: 0; background: var(--card); box-shadow: none;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel)), calc(100% - var(--tf-spickel)) 100%, 0 100%); }
+:root .input-box:focus-within { background: var(--acc-soft); }
+
+/* ---------- Fokus und Bildlauf ---------- */
+:root :focus-visible { outline: 2px solid var(--tf-blau); outline-offset: 2px; border-radius: 0; }
+:root[data-theme="dark"] :focus-visible { outline-color: var(--tf-blau-65); }
+:root ::-webkit-scrollbar { width: 8px; height: 8px; }
+:root ::-webkit-scrollbar-thumb { background: var(--tf-warmgrau); }
+:root ::-webkit-scrollbar-thumb:hover { background: var(--tf-blau); }
+:root *::selection { background: var(--tf-blau-50); color: #000000; }
+
+/* ---------- Keine Kreise (CD 1.5): runde Knöpfe, Punkte und Schalter werden eckig ---------- */
+:root .send, :root .avatar, :root .tab .swatch, :root .ex-search, :root .jump-btn, :root .msg.question .option,
+:root .tree .mark, :root .s-tag, :root .app-ask-badge, :root .mention-tag, :root .examples-wrap .example, :root .toggle, :root .toggle .knob,
+:root .think-switch-track, :root .think-switch-track span, :root .live-dot, :root .srv-dot, :root .status-text::before,
+:root .dot-btn::before, :root .popover, :root .dialog, :root .mod-toast { border-radius: 0 !important; }
+:root .send { background: var(--tf-blau); color: #ffffff; }
+:root .send:hover:not(:disabled) { background: var(--tf-blau-80); }
+:root .jump-btn, :root .popover, :root .dialog { box-shadow: none; border: 1px solid var(--line-2); }

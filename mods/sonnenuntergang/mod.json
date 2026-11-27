@@ -1,8 +1,9 @@
 {
   "id": "sonnenuntergang",
   "name": "Sonnenuntergang",
-  "version": "1.0.0",
-  "beschreibung": "Warmes Orange, Pink und Violett wie der Himmel am Abend, mit einem sanften Farbverlauf oben.",
+  "version": "2.0.0",
+  "beschreibung": "Ein Abendhimmel hinter ASK: Farbverlauf von Violett bis Orange, Hügel am Horizont und eine Sonne, die je nach Uhrzeit höher oder tiefer steht (nachts der Mond). Leuchtet auf, wenn ASK fertig ist. Hell: goldene Stunde.",
   "autor": "ASK",
-  "style": "style.css"
+  "style": "style.css",
+  "script": "mod.js"
 }
