@@ -44,5 +44,12 @@ Vor dem Zusammenführen **jede Datei lesen**, besonders `mod.js`:
 Im Zweifel nicht zusammenführen und die Autorin oder den Autor um Klärung bitten.
 
 ## Enthalten
-- Skills: `bewerbung-schreiben`, `zusammenfassen`, `pruefung-vorbereiten`
-- Mods: `neon`, `robo-helfer`, `pomodoro`, `vokabeln`
+**Skills**
+- Webdesign: `webseite-testen`, `animationen-gestalten`, `browser-spiel-bauen`, `barrierefreiheit-pruefen`, `react-app-bauen`
+- Code: `code-aufraeumen`, `api-bauen`, `sicherheit-pruefen`, `projekt-aufsetzen`, `projekt-dokumentieren`, `grosse-aufgabe-planen`
+- Daten und Automatisierung: `daten-auswerten`, `windows-automatisieren`
+- Alltag und Lernen: `phishing-erkennen`, `bewerbung-schreiben`, `zusammenfassen`, `pruefung-vorbereiten`
+
+**Mods**
+- Aussehen: `neon`, `retro-terminal`, `pastell`, `hoher-kontrast`, `weltraum`, `wald`, `kaffee`, `sonnenuntergang`
+- Funktionen: `robo-helfer`, `pomodoro`, `vokabeln`, `quiz`, `konfetti`, `notizblock`

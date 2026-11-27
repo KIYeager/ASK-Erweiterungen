@@ -1,0 +1,9 @@
+{
+  "id": "konfetti",
+  "name": "Konfetti",
+  "version": "1.0.0",
+  "beschreibung": "Feiert Erfolge mit Konfetti: wenn du «geschafft» oder «es funktioniert» schreibst, wenn ASK meldet, dass alle Tests bestanden sind, oder mit /konfetti. Knopf 🎉 in der Kopfzeile schaltet es ein und aus.",
+  "autor": "ASK",
+  "style": "style.css",
+  "script": "mod.js"
+}

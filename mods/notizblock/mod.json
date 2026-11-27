@@ -1,0 +1,9 @@
+{
+  "id": "notizblock",
+  "name": "Notizblock",
+  "version": "1.0.0",
+  "beschreibung": "Ein Notizblock in der Seitenleiste. Speichert automatisch, merkt sich die letzte Antwort von ASK auf Knopfdruck, fügt Notizen in den Chat ein. Mit /notiz Text schnell etwas notieren.",
+  "autor": "ASK",
+  "style": "style.css",
+  "script": "mod.js"
+}

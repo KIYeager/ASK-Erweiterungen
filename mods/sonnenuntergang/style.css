@@ -1,0 +1,19 @@
+/* Sonnenuntergang: warme Farben und ein sanfter Verlauf in der Kopfzeile */
+:root[data-theme="dark"] {
+  --bg: #1a1220; --side: #150e1a; --pane: #1d1424; --card: #281b30; --hover: #33223d;
+  --line: #3a2843; --line-2: #4c3457; --code: #231829;
+  --text: #fdeee8; --muted: #dcbfc4; --dim: #a98a98;
+  --acc: #ff8a5c; --acc-text: #ffa480; --acc-ink: #2a0f05; --acc-soft: #43242a; --acc-line: #9a4a46;
+  --ok: #8fd6a8; --bad: #ff7a8a; --warn: #ffc46b;
+  --think-1: #b06ad9; --think-2: #e86aa6; --think-3: #ff8a5c; --think-4: #ffc46b;
+  --r: 12px;
+}
+:root[data-theme="light"] {
+  --bg: #fff6f1; --side: #fdece4; --pane: #fffaf7; --card: #fdeee6; --hover: #f9e0d4;
+  --line: #f3d5c7; --line-2: #e8bca8; --code: #fbede5;
+  --text: #2d1520; --muted: #6a3f4c; --dim: #94707c;
+  --acc: #c2410c; --acc-text: #a8380b; --acc-ink: #ffffff; --acc-soft: #ffe4d6; --acc-line: #f2a988;
+  --ok: #2f7d4a; --bad: #b42343; --warn: #8a5600;
+  --r: 12px;
+}
+:root .topbar { background-image: linear-gradient(90deg, rgba(255, 138, 92, .16), rgba(232, 106, 166, .14) 50%, rgba(176, 106, 217, .14)); }

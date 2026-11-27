@@ -1,0 +1,18 @@
+/* Wald: Moos, Tannen und Holz, nur Farben über die Variablen von ASK */
+:root[data-theme="dark"] {
+  --bg: #0f1a14; --side: #0b140f; --pane: #111d16; --card: #17271d; --hover: #1e3326;
+  --line: #24392b; --line-2: #2f4a37; --code: #13221a;
+  --text: #e6f0e4; --muted: #a9c2a8; --dim: #7c967c;
+  --acc: #8fc96b; --acc-text: #a8d98a; --acc-ink: #0d1a08; --acc-soft: #1f3a1f; --acc-line: #4e7a3c;
+  --ok: #8fc96b; --bad: #e98a6a; --warn: #d9b25c;
+  --think-1: #5f9e6e; --think-2: #8fc96b; --think-3: #c9a96b; --think-4: #d98a5c;
+  --r: 12px;
+}
+:root[data-theme="light"] {
+  --bg: #f4f6ef; --side: #ebefe3; --pane: #fafbf6; --card: #eef2e6; --hover: #e1e8d6;
+  --line: #d8e0cb; --line-2: #c3cfb1; --code: #eef2e4;
+  --text: #1b2a1d; --muted: #4a5e4a; --dim: #76877a;
+  --acc: #2f6b3a; --acc-text: #275c31; --acc-ink: #ffffff; --acc-soft: #dfeedd; --acc-line: #9cc59f;
+  --ok: #2f6b3a; --bad: #a4432a; --warn: #7a5a12;
+  --r: 12px;
+}

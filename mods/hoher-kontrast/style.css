@@ -1,0 +1,17 @@
+/* Hoher Kontrast: starke Farben, deutliche Linien, unterstrichene Links, dicker Fokus */
+:root[data-theme="dark"] {
+  --bg: #000000; --side: #000000; --pane: #000000; --card: #0d0d0d; --hover: #262626;
+  --line: #bfbfbf; --line-2: #ffffff; --code: #101010;
+  --text: #ffffff; --muted: #f0f0f0; --dim: #d6d6d6;
+  --acc: #ffe600; --acc-text: #ffe600; --acc-ink: #000000; --acc-soft: #332e00; --acc-line: #ffe600;
+  --ok: #4dff88; --bad: #ff6b6b; --bad-soft: #330000; --warn: #ffb000; --warn-soft: #2b1d00; --warn-line: #ffb000;
+}
+:root[data-theme="light"] {
+  --bg: #ffffff; --side: #ffffff; --pane: #ffffff; --card: #f2f2f2; --hover: #e0e0e0;
+  --line: #4d4d4d; --line-2: #000000; --code: #f2f2f2;
+  --text: #000000; --muted: #1a1a1a; --dim: #333333;
+  --acc: #0033cc; --acc-text: #0033cc; --acc-ink: #ffffff; --acc-soft: #e0e8ff; --acc-line: #0033cc;
+  --ok: #006b1f; --bad: #b00000; --bad-soft: #ffe5e5; --warn: #6b4500; --warn-soft: #fff3d6; --warn-line: #6b4500;
+}
+:root :focus-visible { outline: 3px solid var(--acc) !important; outline-offset: 2px !important; }
+:root .md a { text-decoration: underline; text-underline-offset: 2px; }
