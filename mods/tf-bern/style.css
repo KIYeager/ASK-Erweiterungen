@@ -5,12 +5,13 @@
      45°-Spickel. Inhalte stehen auf einer 2-px-Linie in TF Blau statt in Kästen.
    - Schrift (CD 1.3): DIN OT, Titel fett, Text leicht. DIN OT ist lizenziert und liegt nicht im Mod: Sie wird
      benutzt, wenn sie installiert ist, sonst Bahnschrift (DIN-Schrift von Windows), sonst Arial.
-   - Das TF-Zeichen kommt von ASK selbst; der Mod bringt kein eigenes Logo mit. */
+   - Das TF-Zeichen kommt von ASK selbst; der Mod bringt kein eigenes Logo mit.
+   Der Spickel ist ein Hintergrund (ein Dreieck in der Farbe dahinter), nicht clip-path: So schneidet er keine
+   Menüs ab, die aus einem Kasten herausragen. */
 
 :root {
   --tf-blau: #0082b4; --tf-blau-80: #3399c3; --tf-blau-65: #55aacf; --tf-blau-50: #80c1da;
   --tf-orange: #f28855; --tf-gruen: #4eb68e; --tf-rot: #ee716d; --tf-warmgrau: #a5acae;
-  --tf-spickel-klein: 12px; --tf-spickel: 18px;
   --sans: "DIN OT", "Bahnschrift", Arial, sans-serif;
   --r-sm: 0px; --r: 0px; --r-lg: 0px;
   --shadow: none;
@@ -22,38 +23,68 @@
   --acc: #0082b4; --acc-text: #000000; --acc-ink: #ffffff; --acc-soft: #e6f2f8; --acc-line: #80c1da;
   --ok: #2c7a5b; --bad: #b4302b; --bad-soft: #fdeceb; --warn: #8a4a1f; --warn-soft: #fdf0e9; --warn-line: #f28855;
   --think-1: #80c1da; --think-2: #55aacf; --think-3: #3399c3; --think-4: #0082b4;
+  --tf-chip-an: #80c1da; --tf-chip-an-text: #000000;
 }
 :root[data-theme="dark"] {
-  --bg: #000000; --side: #000000; --pane: #000000; --card: #121414; --hover: #0d2a38; --code: #121414;
+  --bg: #000000; --side: #000000; --pane: #000000; --card: #141616; --hover: #0d2a38; --code: #141616;
   --line: #2b2f30; --line-2: #5c6264;
   --text: #ffffff; --muted: #d5d8d9; --dim: #a5acae;
-  --acc: #55aacf; --acc-text: #80c1da; --acc-ink: #000000; --acc-soft: #0d2a38; --acc-line: #0082b4;
+  --acc: #55aacf; --acc-text: #80c1da; --acc-ink: #000000; --acc-soft: #0d2a38; --acc-line: #3399c3;
   --ok: #4eb68e; --bad: #ee716d; --bad-soft: #2a1110; --warn: #f28855; --warn-soft: #2a1a10; --warn-line: #8a4a1f;
   --think-1: #80c1da; --think-2: #55aacf; --think-3: #3399c3; --think-4: #0082b4;
+  --tf-chip-an: #0082b4; --tf-chip-an-text: #ffffff;
 }
 
-/* ---------- Schrift: Titel fett, Text leicht ---------- */
-:root body { font-weight: 300; line-height: 1.45; letter-spacing: .005em; }
-:root b, :root strong, :root th, :root .wordmark, :root .welcome h1, :root .md h1, :root .md h2, :root .md h3, :root .md h4,
-:root .side-label, :root .new-chat, :root .work-head .title, :root .chat-item.active, :root .group-toggle, :root .dialog h1 { font-weight: 700; }
+/* ---------- Formen: keine Rundungen, keine Schatten (CD 1.5) ----------
+   Gilt bewusst für alle Teile der Oberfläche, damit nichts Rundes übrig bleibt. Ausnahme: der Ladekreis und die
+   Kontext-Anzeige, deren Form etwas bedeutet. */
+:root #root *, :root #root *::before, :root #root *::after, :root .mod-toast { border-radius: 0 !important; }
+:root #root .spin, :root #root .ctx-ring { border-radius: 50% !important; }
+:root .popover, :root .dialog, :root .tour-card, :root .jump-btn, :root .mod-toast { box-shadow: none; border: 1px solid var(--line-2); }
+:root .segmented button.on, :root .toggle .knob, :root .think-switch-track span, :root .mod-file-tabs button.on { box-shadow: none; }
+:root .input-box, :root .chat-item.active { box-shadow: none; }
+
+/* Spickel als Hintergrund: --tf-s = Schenkellänge, --tf-hinten = Farbe hinter dem Kasten */
+:root .new-chat, :root .msg.user .bubble, :root .input-box, :root .msg.question.open {
+  background-image: linear-gradient(315deg, var(--tf-hinten, var(--pane)) calc(var(--tf-s, 12px) * .7071), transparent calc(var(--tf-s, 12px) * .7071 + .5px));
+}
+
+/* ---------- Schrift: Titel fett, Text leicht (CD 1.3) ---------- */
+:root body { font-weight: 300; line-height: 1.45; }
+:root b, :root strong, :root th, :root h1, :root h2, :root h3, :root .wordmark, :root .side-label, :root .new-chat,
+:root .work-head .title, :root .chat-item.active, :root .group-toggle, :root .tab.on, :root .rt button.on, :root .u-num { font-weight: 700; }
+:root .chip, :root .btn, :root .send, :root .segmented button { font-weight: 400; }
 :root .side-label { text-transform: none; letter-spacing: 0; color: var(--tf-blau); font-size: 13px; }
 :root[data-theme="dark"] .side-label { color: var(--tf-blau-65); }
+:root .dialog h2, :root .u-label, :root .eyebrow { text-transform: none; letter-spacing: 0; }
 :root .wordmark { font-size: 17px; letter-spacing: .02em; }
 
 /* ---------- Kopfzeile und Leisten ---------- */
 :root .topbar { background: var(--pane); border-bottom: 2px solid var(--tf-blau); }
 :root .chatbar { background: var(--side); border-right: 1px solid var(--line); }
 :root .sidebar { border-left: 1px solid var(--line); }
-:root .resizer { background: transparent; }
 :root .tab.on { border-color: var(--line); border-bottom-color: var(--pane); box-shadow: inset 0 3px 0 var(--tf-blau); }
-:root .chat-item { border-radius: 0; }
+:root .rt button.on { box-shadow: inset 0 -2px 0 var(--tf-blau); }
 :root .chat-item.active { background: var(--acc-soft); box-shadow: inset 3px 0 0 var(--tf-blau); color: var(--text); }
-:root .new-chat { background: var(--tf-blau); color: #ffffff; border-radius: 0; justify-content: flex-start; padding: 10px 14px;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel-klein)), calc(100% - var(--tf-spickel-klein)) 100%, 0 100%); }
-:root .new-chat:hover:not(:disabled) { background: var(--tf-blau-80); filter: none; }
-:root .search, :root .crumb, :root .chip, :root .btn, :root .model-pick select, :root .example, :root .avatar { border-radius: 0 !important; }
-:root .btn { box-shadow: none; }
-:root .btn.primary, :root .btn-primary { background: var(--tf-blau); border-color: var(--tf-blau); color: #ffffff; }
+:root .new-chat { --tf-hinten: var(--side); --tf-s: 12px; background-color: var(--tf-blau); color: #ffffff; justify-content: flex-start; padding: 10px 14px; }
+:root .new-chat:hover:not(:disabled) { background-color: var(--tf-blau-80); filter: none; }
+:root .new-chat:disabled { background-color: var(--tf-blau-50); color: #000000; opacity: 1; }
+:root[data-theme="dark"] .new-chat:disabled { background-color: #1d4152; color: var(--muted); }
+
+/* ---------- Knöpfe ---------- */
+:root .btn.primary, :root .btn-primary, :root .send { background-color: var(--tf-blau); border-color: var(--tf-blau); color: #ffffff; }
+:root .btn.primary:hover:not(:disabled), :root .send:hover:not(:disabled) { background-color: var(--tf-blau-80); }
+:root .send:disabled { background-color: var(--tf-blau-50); color: #000000; opacity: 1; }
+:root[data-theme="dark"] .send:disabled { background-color: #1d4152; color: var(--muted); }
+:root .chip.on, :root .chip.think-chip.on, :root .mode-chip.mode-plan { background: var(--tf-chip-an); color: var(--tf-chip-an-text) !important; border-color: var(--tf-chip-an); }
+:root .segmented { padding: 0; }
+:root .segmented button.on { background: var(--tf-blau); color: #ffffff; }
+:root .toggle.on { background: var(--tf-blau); }
+:root .toggle .knob { top: 4px; left: 4px; width: 14px; height: 14px; }
+:root .toggle.on .knob { transform: translateX(16px); }
+:root .think-ticks button.sel { color: var(--text); font-weight: 700; }
+:root .think-knob { color: var(--tf-blau); }
+:root .slash > div.active, :root .slash > div:hover { background: var(--acc-soft); box-shadow: inset 3px 0 0 var(--tf-blau); }
 
 /* ---------- Willkommen ---------- */
 :root .welcome-mark { order: -2; height: 52px; }
@@ -64,42 +95,34 @@
 :root .example:hover { background: var(--acc-soft); }
 
 /* ---------- Chat ---------- */
-:root .msg.user .bubble { background: var(--tf-blau); color: #ffffff; border-radius: 0; font-weight: 400; padding: 10px 16px 12px;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel-klein)), calc(100% - var(--tf-spickel-klein)) 100%, 0 100%); }
+:root .msg.user .bubble { --tf-s: 12px; background-color: var(--tf-blau); color: #ffffff; font-weight: 400; padding: 10px 16px 12px; }
 :root .msg.user .bubble a, :root .msg.user .bubble code { color: #ffffff; }
-:root .work { border: 0 !important; border-top: 2px solid var(--tf-blau) !important; border-radius: 0 !important; background: var(--card); }
-:root .md h1, :root .md h2, :root .md h3 { color: var(--text); }
+:root .msg.user .bubble code { background: rgba(255, 255, 255, .18); }
+:root .work { border: 0 !important; border-top: 2px solid var(--tf-blau) !important; background: var(--card); }
 :root .md h2 { padding-top: 6px; border-top: 2px solid var(--tf-blau); }
 :root .md a { color: var(--text); text-decoration: underline; text-decoration-color: var(--tf-blau); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 :root .md a:hover { text-decoration-color: var(--tf-blau-65); }
-:root .md table { border: 0; border-top: 2px solid var(--tf-blau); border-radius: 0; }
+:root .md table { border: 0; border-top: 2px solid var(--tf-blau); }
 :root .md th { background: transparent; color: var(--text); }
-:root .md td, :root .md th { border-color: var(--line); }
-:root .md pre, :root .md .codehead { border-radius: 0 !important; }
 :root .md blockquote { border-left: 3px solid var(--tf-blau); color: var(--muted); }
 :root .md code.file { background: var(--acc-soft); color: var(--text); }
-:root .msg.question, :root .msg.approval { border-radius: 0 !important; }
-:root .msg.question.open { background: var(--acc-soft); border: 0; border-top: 2px solid var(--tf-blau); }
-:root .msg.assistant.streaming .md > :last-child::after { background: var(--tf-blau); border-radius: 0; }
+:root .msg.question.open { --tf-s: 14px; --tf-hinten: var(--pane); background-color: var(--acc-soft); border: 0; border-top: 2px solid var(--tf-blau); }
+:root .msg.question .option { background: var(--pane); border-color: var(--tf-blau-50); }
+:root .msg.question .option:hover { background: var(--tf-blau); color: #ffffff; border-color: var(--tf-blau); }
+:root .msg.approval.open { border: 0; border-top: 2px solid var(--tf-orange); }
+:root .msg.assistant.streaming .md > :last-child::after { background: var(--tf-blau); }
 
 /* ---------- Eingabe ---------- */
-:root .input-box { border: 0; border-top: 2px solid var(--tf-blau); border-radius: 0; background: var(--card); box-shadow: none;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tf-spickel)), calc(100% - var(--tf-spickel)) 100%, 0 100%); }
-:root .input-box:focus-within { background: var(--acc-soft); }
+:root .input-box { --tf-s: 14px; --tf-hinten: var(--pane); border: 0; border-top: 2px solid var(--tf-blau); background-color: var(--card); }
+:root .input-box:focus-within { box-shadow: inset 0 2px 0 var(--tf-blau); }
 
-/* ---------- Fokus und Bildlauf ---------- */
-:root :focus-visible { outline: 2px solid var(--tf-blau); outline-offset: 2px; border-radius: 0; }
-:root[data-theme="dark"] :focus-visible { outline-color: var(--tf-blau-65); }
+/* ---------- Menüs, Dialoge, Meldungen ---------- */
+:root .dialog { border-top: 3px solid var(--tf-blau); }
+:root .tour-card { border-top: 3px solid var(--tf-blau); }
+:root .mod-toast { background: var(--text); color: var(--bg); }
+
+/* ---------- Bildlauf und Auswahl ---------- */
 :root ::-webkit-scrollbar { width: 8px; height: 8px; }
 :root ::-webkit-scrollbar-thumb { background: var(--tf-warmgrau); }
 :root ::-webkit-scrollbar-thumb:hover { background: var(--tf-blau); }
 :root *::selection { background: var(--tf-blau-50); color: #000000; }
-
-/* ---------- Keine Kreise (CD 1.5): runde Knöpfe, Punkte und Schalter werden eckig ---------- */
-:root .send, :root .avatar, :root .tab .swatch, :root .ex-search, :root .jump-btn, :root .msg.question .option,
-:root .tree .mark, :root .s-tag, :root .app-ask-badge, :root .mention-tag, :root .examples-wrap .example, :root .toggle, :root .toggle .knob,
-:root .think-switch-track, :root .think-switch-track span, :root .live-dot, :root .srv-dot, :root .status-text::before,
-:root .dot-btn::before, :root .popover, :root .dialog, :root .mod-toast { border-radius: 0 !important; }
-:root .send { background: var(--tf-blau); color: #ffffff; }
-:root .send:hover:not(:disabled) { background: var(--tf-blau-80); }
-:root .jump-btn, :root .popover, :root .dialog { box-shadow: none; border: 1px solid var(--line-2); }
