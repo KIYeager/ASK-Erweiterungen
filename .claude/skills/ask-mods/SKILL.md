@@ -75,6 +75,30 @@ Das Wurzelelement trägt `data-theme="dark"` oder `data-theme="light"`:
 
 Eigene Elemente mit Klassen, die mit der Kennung beginnen (`.robo-helfer-blase`), damit nichts mit ASK kollidiert. Nicht pauschal `* { … }` umstellen. `@media (prefers-reduced-motion: reduce)` für Animationen beachten.
 
+<!-- OBERFLAECHE START (gleicher Abschnitt in resources/mod-anleitung/SKILL.md und resources/standard-skills/mod-erstellen/SKILL.md; ein Test prüft jede Klasse) -->
+## Aufbau der Oberfläche (Selektoren)
+
+CSS wirkt nur, wenn der Selektor ein Element trifft. Erfinde keine Klassen, nimm diese:
+
+| Bereich | Selektor |
+|---|---|
+| ganzes Fenster | `.app` |
+| Kopfzeile | `.topbar`; Logo `.brand`; Tabs `.tabs`, ein Tab `.tab`, der aktive `.tab.on`; Fensterknöpfe `.win-ctl` |
+| linke Leiste (Projekte, Chats) | `.chatbar`; Knopf «Neuer Chat» `.new-chat`; Kopf eines Projekts `.group-head`; Chat in der Liste `.chat-item`, der offene `.chat-item.active`; Profil unten `.account` |
+| Chat | `.chat-area`; Verlauf `.transcript` |
+| Eingabe der Person | `.msg.user .bubble` |
+| Antwort von ASK | `.msg.assistant`; Text darin `.md` (Überschriften, Listen, `code`, `pre`, `table`) |
+| Arbeitsschritte, Gedanken | `.msg.tool`, `.msg.thought` |
+| Eingabefeld | `.input-box`; Knöpfe darin `.input-tools .chip`; Senden `#send-btn` |
+| Vorschläge im leeren Chat | `.examples .example` |
+| rechte Seitenleiste | `.sidebar`; Reiter `.rt`; Inhalt `.rp-body` |
+| Dialoge und Menüs | `.overlay`, `.dialog`, `.chat-menu` |
+| Knöpfe allgemein | `.btn`, `.btn.primary`, `.icon-btn` |
+| Teile von Mods | Knöpfe in der Kopfzeile `.mod-btns`; Bereich in der Seitenleiste `.mod-panel-host` |
+
+Farben, Rundungen und Schriften ändert man am besten über die Variablen (oben); das wirkt überall gleichzeitig. Für einzelne Bereiche die Selektoren aus der Tabelle nehmen, eigene Elemente mit Klassen, die mit der Kennung beginnen.
+<!-- OBERFLAECHE ENDE -->
+
 ## Code (mod.js)
 
 Ein normales Skript, **kein** `import`/`export`. Immer so einpacken, damit spätere Aufrufe die eigene Ablage und Dateien treffen:
