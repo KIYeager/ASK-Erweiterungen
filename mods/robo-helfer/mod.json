@@ -1,0 +1,9 @@
+{
+  "id": "robo-helfer",
+  "name": "Robo-Helfer",
+  "version": "1.0.0",
+  "beschreibung": "Ein kleiner Roboter, der auf ASK reagiert, Tipps gibt und sich verschieben lässt.",
+  "autor": "ASK",
+  "style": "style.css",
+  "script": "mod.js"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "vokabeln",
+  "name": "Vokabeln und einfach erklärt",
+  "version": "1.0.0",
+  "beschreibung": "Zwei Befehle zum Lernen: /vokabeln fragt dich ab, /erklaer-einfach erklärt ein Thema in einfachen Worten.",
+  "autor": "ASK",
+  "befehle": [
+    {
+      "name": "vokabeln",
+      "beschreibung": "Vokabeln abfragen",
+      "prompt": "Frag mich 10 Vokabeln ab zum Thema: {{text}}. Stell immer nur eine Frage, warte auf meine Antwort, sag mir, ob sie stimmt, und zähl am Schluss meine Punkte."
+    },
+    {
+      "name": "erklaer-einfach",
+      "beschreibung": "Ein Thema in einfachen Worten erklären",
+      "prompt": "Erkläre mir in einfachen Worten, ohne Fachbegriffe, mit einem Beispiel aus dem Alltag: {{text}}. Frag am Schluss, ob ich es verstanden habe."
+    }
+  ],
+  "anweisungen": "Wenn die Person Vokabeln üben will, korrigiere freundlich und gib bei Fehlern die richtige Lösung mit einem Merksatz."
+}

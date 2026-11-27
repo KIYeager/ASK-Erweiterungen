@@ -1,0 +1,26 @@
+/* Neon: nur Farben und Rundung über die Variablen von ASK */
+:root[data-theme="dark"] {
+  --bg: #0b0b14;
+  --pane: #12121f;
+  --card: #1a1a2e;
+  --text: #eaf6ff;
+  --dim: #9aa4c7;
+  --line: #2b2b4a;
+  --acc: #22e5ff;
+  --acc-ink: #04121a;
+  --bad: #ff4d8d;
+  --r: 14px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f3ff;
+  --pane: #ffffff;
+  --card: #ece6ff;
+  --text: #1b1233;
+  --dim: #5b5478;
+  --line: #d4c9f5;
+  --acc: #7c1fe0;
+  --acc-ink: #ffffff;
+  --bad: #c4125a;
+  --r: 14px;
+}

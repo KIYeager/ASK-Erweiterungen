@@ -1,0 +1,9 @@
+{
+  "id": "pomodoro",
+  "name": "Pomodoro-Timer",
+  "version": "1.0.0",
+  "beschreibung": "Ein Lern-Timer im Seitenpanel: 25 Minuten arbeiten, 5 Minuten Pause.",
+  "autor": "ASK",
+  "style": "style.css",
+  "script": "mod.js"
+}

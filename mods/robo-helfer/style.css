@@ -1,0 +1,39 @@
+.robo-helfer-figur {
+  position: fixed; right: 24px; bottom: 120px; z-index: 60;
+  width: 72px; touch-action: none; user-select: none; font-family: var(--sans);
+}
+.robo-helfer-figur[hidden] { display: none; }
+.robo-helfer-koerper { display: block; width: 72px; height: 84px; cursor: grab; animation: robo-helfer-wippen 3s ease-in-out infinite; }
+.robo-helfer-figur.robo-helfer-zieht .robo-helfer-koerper { cursor: grabbing; animation: none; }
+.robo-helfer-koerper .robo-helfer-kopf { fill: var(--card); stroke: var(--acc); stroke-width: 3; }
+.robo-helfer-koerper .robo-helfer-rumpf { fill: var(--pane); stroke: var(--acc); stroke-width: 3; }
+.robo-helfer-koerper .robo-helfer-auge { fill: var(--acc); transform-box: fill-box; transform-origin: center; animation: robo-helfer-blinzeln 5s infinite; }
+.robo-helfer-koerper .robo-helfer-antenne { stroke: var(--acc); stroke-width: 3; fill: none; }
+.robo-helfer-koerper .robo-helfer-lampe { fill: var(--bad); }
+.robo-helfer-koerper .robo-helfer-mund { stroke: var(--acc); stroke-width: 3; fill: none; stroke-linecap: round; }
+.robo-helfer-blase {
+  position: absolute; right: 0; bottom: 96px; width: max-content; max-width: 220px;
+  background: var(--pane); color: var(--text); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 8px 12px; font-size: 13px; line-height: 1.4;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+}
+.robo-helfer-blase[hidden], .robo-helfer-menue[hidden] { display: none; }
+.robo-helfer-menue {
+  position: absolute; right: 0; bottom: 96px; width: 230px;
+  background: var(--pane); color: var(--text); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 10px 12px; font-size: 13px; line-height: 1.4;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+}
+.robo-helfer-menue strong { display: block; margin-bottom: 4px; color: var(--acc); }
+.robo-helfer-menue p { margin: 0 0 6px; }
+.robo-helfer-weg {
+  position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; padding: 0;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--pane);
+  color: var(--dim); font-size: 13px; line-height: 1; cursor: pointer;
+}
+.robo-helfer-weg:hover, .robo-helfer-weg:focus-visible { color: var(--text); border-color: var(--acc); }
+@keyframes robo-helfer-wippen { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes robo-helfer-blinzeln { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+@media (prefers-reduced-motion: reduce) {
+  .robo-helfer-koerper, .robo-helfer-koerper .robo-helfer-auge { animation: none; }
+}

@@ -1,0 +1,21 @@
+# Prüft Skills und Mods bei jedem Pull Request (scripts/pruefen.mjs)
+name: Katalog prüfen
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  pruefen:
+    name: Skills und Mods
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/pruefen.mjs

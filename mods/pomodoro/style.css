@@ -1,0 +1,8 @@
+.pomodoro-box { padding: 16px; display: flex; flex-direction: column; gap: 12px; align-items: center; color: var(--text); font-family: var(--sans); }
+.pomodoro-phase { color: var(--dim); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+.pomodoro-zeit { font-size: 48px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.pomodoro-knoepfe { display: flex; gap: 8px; }
+.pomodoro-knoepfe button { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: var(--r); padding: 8px 14px; cursor: pointer; font: inherit; }
+.pomodoro-knoepfe button.pomodoro-start { background: var(--acc); color: var(--acc-ink); border-color: var(--acc); }
+.pomodoro-knoepfe button:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.pomodoro-zaehler { color: var(--dim); font-size: 13px; }
